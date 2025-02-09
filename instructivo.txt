@@ -1,0 +1,29 @@
+Esta funcionalidad permite gestionar un listado de animes mediante la creación de tarjetas (cards) que presentan información sobre cada serie. Además, permite a los usuarios marcar animes como favoritos y almacenarlos en el LocalStorage del navegador.
+
+Características principales:
+
+1- Listado de animes: Se define un array de objetos donde cada elemento representa un anime con atributos como nombre, tipo, cantidad de temporadas, cantidad de capítulos, año de lanzamiento y última temporada emitida.
+
+2- Creación de tarjetas: Se genera dinámicamente una tarjeta por cada anime en la lista. Cada tarjeta incluye:
+Nombre del anime
+Descripción breve (tipo, número de temporadas y capítulos, año de estreno)
+Un botón para marcarlo como favorito
+
+3- Gestor de favoritos:
+Al hacer clic en "Marcar anime", se almacena el anime en el LocalStorage si no ha sido agregado previamente.
+Si el anime ya está en la lista de favoritos, se muestra una alerta indicando que ya ha sido agregado.
+Los animes marcados como favoritos reciben una clase especial para diferenciarlos visualmente.
+
+4- Visualización de favoritos:
+Se obtiene la lista de favoritos almacenada en el LocalStorage y se muestra en una sección aparte.
+Cada anime favorito aparece con su nombre y cantidad de temporadas.
+Se incluye un botón de "Eliminar" en cada favorito, permitiendo su remoción de la lista.
+
+5- Eliminación de favoritos:
+Al hacer clic en "Eliminar", se actualiza el LocalStorage para remover el anime de la lista de favoritos y se recarga la página para reflejar el cambio.
+
+6- Carga y actualización automática:
+La lista de favoritos se carga automáticamente cuando la página se inicia.
+Cada vez que se agrega o elimina un anime de favoritos, la página se recarga para reflejar los cambios.
+
+
