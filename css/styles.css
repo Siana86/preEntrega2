@@ -3,7 +3,7 @@
 
 * {
     margin: auto;
-    padding: 0.3125rem, 0.3125rem;
+    padding: 0.3125rem 0.3125rem;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
@@ -20,9 +20,117 @@
 }
 
 
+#animeCard,
+#favoriteList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    padding: 1.25rem;
+    max-width: 100%;
+}
+
+.navbar-brand {
+    font-size:xx-large;
+}
+
+.nav-link {
+    font-size:x-large;
+}
+
+#animeCard div,
+#favoriteList div {
+    list-style: none;
+    background: #f4f4f4;
+    padding: .9375rem;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+#animeCard image {
+    width: 95%;
+    height: auto;
+    max-width: 12.5rem;
+    border-radius: .5rem;
+}
+
+#favoriteList img {
+    width: 95%;
+    height: auto;
+    max-width: 100%;
+    border-radius: .5rem;
+}
+
+
 
 /* Estilos para mostrar que el anime esta en listado de favoritos */
 .favorito {
     background-color: #d3d3d3;
     opacity: 0.7;
+}
+
+
+/*Hoover botones*/
+.marcarAnime, 
+.eliminarAnime {
+    background: #1B3A4B;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 2.5rem;
+    font-size: 1em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+.marcarAnime:hover {
+    background: #fff;
+    color: #1AAB8A;
+}
+
+.eliminarAnime:hover {
+    background: #fff;
+    color: #e4223f;
+}
+
+.marcarAnime:before,
+.marcarAnime:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #108030;
+    transition: 400ms ease all;
+}
+
+.eliminarAnime:before,
+.eliminarAnime:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #b90b0b;
+    transition: 400ms ease all;
+}
+
+
+.marcarAnime:after,
+.eliminarAnime:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.marcarAnime:hover:before,
+.marcarAnime:hover:after,
+.eliminarAnime:hover:before,
+.eliminarAnime:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
 }
